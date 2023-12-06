@@ -30,6 +30,7 @@ function App() {
       <div className='flex items-center justify-center'>
         <div className='max-w-[90%] relative'>
           <img className='hidden' src='/assets/other/beiley-end.png' />
+          <img className='hidden' src={beiley.beated} />
           {beatsCount >= 94 ? (
             <div className='relative'>
               <EndText />
