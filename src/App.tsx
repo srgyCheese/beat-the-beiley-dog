@@ -31,6 +31,8 @@ function App() {
         <div className='max-w-[90%] relative'>
           <img className='hidden' src='/assets/other/beiley-end.png' />
           <img className='hidden' src={beiley.beated} />
+          <img className='hidden' src={beiley.calm} />
+          <audio src='/assets/sounds/pan/1.mp3' className='hidden'></audio>
           {beatsCount >= 94 ? (
             <div className='relative'>
               <EndText />
