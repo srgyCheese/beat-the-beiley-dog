@@ -20,7 +20,7 @@ const DraggableItem = ({ initialPosition, id, url }: { initialPosition: { x: num
 
   return (
     <div
-      className={`w-[200px] h-[200px] bg-red-600 fixed cursor-pointer rounded-lg overflow-hidden ${isDragging ? 'pointer-events-none z-10' : ''}`}
+      className={`w-[200px] h-[200px] bg-red-600 fixed cursor-pointer rounded-lg bg-cover bg-center select-none ${isDragging ? 'pointer-events-none z-10' : ''}`}
       onMouseDown={e => {
         const { pageX, pageY } = e
 
@@ -34,12 +34,11 @@ const DraggableItem = ({ initialPosition, id, url }: { initialPosition: { x: num
       style={{
         top: `${lastDraggingPosition.current.y - cursorOffset.y}px`,
         left: `${lastDraggingPosition.current.x - cursorOffset.x}px`,
+        backgroundImage: `url("data:image/png;base64,${url}")`
       }}
       data-type='feed-item'
       data-id={id}
-    >
-      <img className="w-full h-full pointer-events-none object-cover" src={`data:image/png;base64,${url}`} alt="" />
-    </div>
+    />
   )
 }
 

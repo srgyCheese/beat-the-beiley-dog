@@ -45,7 +45,7 @@ export const getRandomCategory = () => {
     },
     {
       item: 'food',
-      weight: 40
+      weight: 35
     },
     {
       item: 'still_life',
@@ -57,19 +57,19 @@ export const getRandomCategory = () => {
     },
     {
       item: 'wildlife',
-      weight: 30
+      weight: 25
     },
   ]) as Category
 }
 
 const categoriesChances = {
-  nature: 0.3,
+  nature: 0.2,
   city: 0.2,
-  technology: 0.3,
+  technology: 0.2,
   food: 0.9,
   still_life: 0.2,
   abstract: 0.1,
-  wildlife: 0.8,
+  wildlife: 0.7,
 }
 
 export const rollCategory = (category: Category) => {
