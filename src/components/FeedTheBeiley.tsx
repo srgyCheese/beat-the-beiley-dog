@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { beileyStates } from '../utils/states'
 import RandomItemsField from './RandomItemsField'
 import FeedingBeiley from './FeedingBeiley'
-import { Item, rollCategory } from '../types/feeding'
+import { Item, rollCategory } from '../utils/feeding'
 import useMistakeAnimation from '../hooks/useMistakeAnimation'
 
 const maxFullness = 5
@@ -58,7 +58,7 @@ const FeedTheBeiley = () => {
       </div>
 
 
-      <div className='flex items-center max-w-[100%] sm:max-w-[90%]  m-auto h-[70vh] sm:gap-10 flex-wrap sm:flex-nowrap w-full'>
+      <div className='flex items-center max-w-[100%] sm:max-w-[90%] m-auto sm:gap-10 flex-wrap sm:flex-nowrap w-full'>
         <FeedingBeiley
           beiley={beiley}
           items={items}

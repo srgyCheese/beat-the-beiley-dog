@@ -1,4 +1,4 @@
-import { Category } from "../types/feeding"
+import { Category } from "./feeding"
 
 const verySecretApiKey = 'xt7iJmpaZL3udJp9qlTwtQ==8icH39lHwRg4CwXr'
 

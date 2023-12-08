@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useLayoutEffect } from "react"
 import DraggableItem from "./DraggableItem"
-import { Item, categories, getRandomCategory } from "../types/feeding"
+import { Item, categories, getRandomCategory } from "../utils/feeding"
 import { getRandomImage } from "../utils/getRandomImage"
 
 function getRandomInt(min: number, max: number) {
@@ -53,7 +53,7 @@ const RandomItemsField = ({ items, setItems, isEnd }: { items: Item[], setItems:
   }, [])
 
   return (
-    <div className="h-full w-full min-w-[200px]" ref={layout}>
+    <div className="w-full min-w-[200px] h-[70vh]" ref={layout}>
       {layout.current
         ? items?.length
           ? items.map(item => {

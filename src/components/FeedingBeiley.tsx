@@ -1,6 +1,6 @@
 import { useWindowEvent } from "@mantine/hooks"
 import { useRef, useState } from "react"
-import { Item } from "../types/feeding"
+import { Item } from "../utils/feeding"
 import { useOnPointerEnter } from "../hooks/useOnPointerEnter"
 import { useOnPointerLeave } from "../hooks/useOnPointerLeave"
 import { useOnPointerUp } from "../hooks/useOnPointerUp"
@@ -85,7 +85,7 @@ const FeedingBeiley = ({ beiley, items, eatItem, isFail, isWin }:
 
   if (isWin || isFail) {
     return (
-      <div className='w-full sm:min-w-[505px] h-full relative px-1 sm:px-0 sm:w-auto'>
+      <div className='w-full sm:min-w-[505px] relative px-1 sm:px-0 sm:w-auto h-[70vh]'>
         <audio src='/assets/sounds/eating.mp3' hidden />
         <div
           className={`w-full h-full select-none rounded-md overflow-hidden bg-no-repeat bg-cover bg-center ${isEatingAnimation ? 'eating-beiley' : ''}`}
@@ -98,7 +98,7 @@ const FeedingBeiley = ({ beiley, items, eatItem, isFail, isWin }:
   }
 
   return (
-    <div className='w-full sm:min-w-[505px] h-full relative px-1 sm:px-0 sm:w-auto'>
+    <div className='w-full sm:min-w-[505px] relative px-1 sm:px-0 sm:w-auto h-[70vh] '>
       <audio src='/assets/sounds/eating.mp3' hidden />
       <div
         ref={feedAreaRef}
