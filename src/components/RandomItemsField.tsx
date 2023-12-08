@@ -29,8 +29,6 @@ const RandomItemsField = ({ items, setItems, isEnd }: { items: Item[], setItems:
           category: imageCategory
         }
       }))
-
-      console.log(items);
       
       setItems(items)
     }
@@ -55,7 +53,7 @@ const RandomItemsField = ({ items, setItems, isEnd }: { items: Item[], setItems:
   }, [])
 
   return (
-    <div className="h-full w-full" ref={layout}>
+    <div className="h-full w-full min-w-[200px]" ref={layout}>
       {layout.current
         ? items?.length
           ? items.map(item => {

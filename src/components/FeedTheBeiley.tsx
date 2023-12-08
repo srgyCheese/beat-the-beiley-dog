@@ -58,7 +58,7 @@ const FeedTheBeiley = () => {
       </div>
 
 
-      <div className='flex items-center max-w-[90%] m-auto h-[70vh] gap-10'>
+      <div className='flex items-center max-w-[100%] sm:max-w-[90%]  m-auto h-[70vh] sm:gap-10 flex-wrap sm:flex-nowrap w-full'>
         <FeedingBeiley
           beiley={beiley}
           items={items}
