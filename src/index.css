@@ -5,7 +5,6 @@ body {
 }
 
 * {
-  cursor: none;
   box-sizing: border-box;
 }
 
@@ -16,6 +15,29 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+@keyframes eatingBeiley {
+  0% {
+    background-image: url(/assets/beiley-feeding/openMouth.jpg);
+  }
+  49% {
+    background-image: url(/assets/beiley-feeding/openMouth.jpg);
+  }
+
+  50% {
+    background-image: url(/assets/beiley-feeding/closedMouth.jpg);
+  }
+
+  100% {
+    background-image: url(/assets/beiley-feeding/closedMouth.jpg);
+  }
+}
+
+.eating-beiley {
+  animation-name: eatingBeiley;
+  animation-iteration-count: infinite;
+  animation-duration: 200ms;
 }
 
 @tailwind base;
