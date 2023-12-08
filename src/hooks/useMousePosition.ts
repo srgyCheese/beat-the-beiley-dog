@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react"
 
 export default function useMousePosition() {
-  const [mousePosition, setMousePosition] = useState<{x: null | number, y: null | number}>({ x: null, y: null })
+  const [mousePosition, setMousePosition] = useState<{ x: null | number, y: null | number }>({ x: null, y: null })
 
   useEffect(() => {
     const mouseMoveHandler = (event: MouseEvent | TouchEvent) => {
-      if (event instanceof TouchEvent) {
-        const { clientX, clientY } = event.touches[0]
+      if (event instanceof MouseEvent) {
+        const { clientX, clientY } = event
         setMousePosition({ x: clientX, y: clientY })
-
         return
       }
 
-      const { clientX, clientY } = event
+      const { clientX, clientY } = event.touches[0]
       setMousePosition({ x: clientX, y: clientY })
     }
 
