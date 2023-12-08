@@ -1,3 +1,3 @@
 # React + TypeScript + Vite
 
-CAUTION: shittycode on the head
+CAUTION: shittycode. made for fun
